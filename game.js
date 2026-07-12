@@ -16,8 +16,9 @@ function getHumanChoice() {
 let humanScore = 0;
 let computerScore =0;
 function playRound(humanChoice, computerChoice) {
+    humanChoice = humanChoice.toLowerCase();
     if (humanChoice === computerChoice) {
-        console.log("It's a tie! Both chose ${humanChoice}.");
+        console.log(`It's a tie! Both chose ${humanChoice}.`);
         return;
     }
     
@@ -28,10 +29,10 @@ function playRound(humanChoice, computerChoice) {
     };
 
     if(beats[humanChoice] === computerChoice) {
-        console.log("You win! ${humanChoice} beats ${computerChoice}.");
+        console.log(`You win! ${humanChoice} beats ${computerChoice}.`);
         humanScore++;
     } else {
-        console.log("You lose! ${computerChoice} beats ${humanChoice}.");
+        console.log(`You lose! ${computerChoice} beats ${humanChoice}.`);
         computerScore++;
     }
 
