@@ -13,3 +13,15 @@ function getHumanChoice() {
     const humanChoice = prompt("Enter your choice: rock, paper, or scissors");
     return humanChoice.toLowerCase();
 }
+let humanScore = 0;
+let computerScore =0;
+function playRound(humanChoice, computerChoice) {
+    if (humanChoice === computerChoice) {
+        console.log("It's a tie! Both chose ${humanChoice}.");
+        return;
+    }
+
+}
+const humanChoice = getHumanChoice();
+const computerChoice = getComputerChoice();
+playRound(humanChoice, computerChoice);
