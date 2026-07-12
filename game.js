@@ -20,6 +20,20 @@ function playRound(humanChoice, computerChoice) {
         console.log("It's a tie! Both chose ${humanChoice}.");
         return;
     }
+    
+    const beats={
+        rock: "scissors",
+        paper: "rock",
+        scissors: "paper"
+    };
+
+    if(beats[humanChoice] === computerChoice) {
+        console.log("You win! ${humanChoice} beats ${computerChoice}.");
+        humanScore++;
+    } else {
+        console.log("You lose! ${computerChoice} beats ${humanChoice}.");
+        computerScore++;
+    }
 
 }
 const humanChoice = getHumanChoice();
